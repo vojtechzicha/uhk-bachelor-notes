@@ -1,0 +1,47 @@
+\documentclass[twoside,12pt]{article}
+
+\usepackage{blindtext}
+\usepackage[czech]{babel}
+\usepackage[a4paper,top=2cm,bottom=2cm,inner=3cm,outer=1cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[parfill]{parskip}
+\usepackage{charter}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\fancypagestyle{uhk}{
+  \fancyhf{}
+  \fancyhead[C]{KMEZO Mezinárodní obchod}
+  \fancyfoot[OR, EL]{Stránka \thepage \hspace{1pt} z(ze) \pageref{LastPage}}
+  \renewcommand{\headrulewidth}{.4pt}
+  \setlength{\headheight}{14.49998pt}
+}
+
+\fancyhf{}
+\pagestyle{uhk}
+
+\title{KMEZO Mezinárodní obchod}
+\author{Vojtěch Zicha}
+
+\begin{document}
+\maketitle\thispagestyle{uhk}
+
+\begin{abstract}
+Vytvořeno podle přednášek \textbf{Ing. Martin Král} v kombinovaném studiu a podle materiálů dostupných ke studiu v systému UHK Oliva.
+\end{abstract}
+
+\tableofcontents
+% \clearpage
+
+\section{Test}
+
+\[ x_{1,2}=\frac{-b\pm\sqrt{b^2-4ac}}{2a} \]
+
+\end{document}

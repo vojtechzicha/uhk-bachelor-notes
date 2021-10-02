@@ -1,0 +1,54 @@
+\documentclass[twoside,12pt]{article}
+
+\usepackage{blindtext}
+\usepackage[english]{babel}
+\usepackage[a4paper,top=2cm,bottom=2cm,inner=3cm,outer=1cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[parfill]{parskip}
+\usepackage[hybrid]{markdown}
+\usepackage{charter}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\fancypagestyle{mypagestyle}{
+  \fancyhf{}
+  \fancyhead[C]{TOGAF Part 1}
+  \fancyfoot[OR, EL]{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+  \renewcommand{\headrulewidth}{.4pt}
+}
+
+\fancyhf{}
+\pagestyle{mypagestyle}
+
+\title{TOGAF Part 1}
+\author{Vojtěch Zicha}
+
+\begin{document}
+\maketitle\thispagestyle{mypagestyle}
+
+\begin{abstract}
+\begin{markdown}
+Created from the information from TOGAF Self-Study pack and custom research into TOGAF topics.
+\end{markdown}
+\end{abstract}
+
+\begin{markdown}
+
+\tableofcontents
+
+\clearpage
+\section{Basic and Core Concepts}
+
+\section{Key Terminology and ADM}
+
+\section{Enterprise Continuum}
+
+\end{markdown}
+\end{document}

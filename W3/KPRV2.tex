@@ -1,0 +1,84 @@
+\documentclass[twoside,12pt]{article}
+
+\usepackage{blindtext}
+\usepackage[czech]{babel}
+\usepackage[a4paper,top=2cm,bottom=2cm,inner=3cm,outer=1cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[parfill]{parskip}
+\usepackage[hybrid]{markdown}
+\usepackage{charter}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\fancypagestyle{mypagestyle}{
+  \fancyhf{}
+  \fancyhead[C]{KPRV2 Právo II}
+  \fancyfoot[OR, EL]{Stránka \thepage \hspace{1pt} z(ze) \pageref{LastPage}}
+  \renewcommand{\headrulewidth}{.4pt}
+}
+
+\fancyhf{}
+\pagestyle{mypagestyle}
+
+\title{KPRV2 Právo II}
+\author{Vojtěch Zicha}
+
+\begin{document}
+\maketitle\thispagestyle{mypagestyle}
+
+\begin{abstract}
+Vytvořeno podle přednášek \textbf{JUDr. Bc. Jan Janeček, Ph.D.} v kombinovaném studiu a podle materiálů dostupných ke studiu v systému UHK Oliva.
+\end{abstract}
+
+Právo 2 se orientuje na český právní řád a soukromoprávní oblasti - občanské, pracovní a procesní právo.
+
+Rozeznáváme následující normy:
+
+\begin{itemize}
+\item \textbf{kogentní} - znamená domluvený normou, vztah mezi osobami nelze řešit dohodou, ale musí být uplatňováno podle textu normy; typicky norma veřejného práva;
+\item \textbf{dispozitivní} - normy které mohou dohodou být upraveny; typicky norma soukromého práva.
+\end{itemize}
+
+Pro soukromé právo platí je dovoleno vše, co není zakázáno.
+
+\tableofcontents
+
+\clearpage
+\section{Věcná práva}
+
+\textbf{Věc} je definováno jako vše, co je rozdílné od osoby a slouží potřebě lidí. Specificky - člověk, osoba a zvíře není věc. Věci dělíme na \textbf{hmotné} (ovladatelná část vnějšího světa, která má povahu samostatného předmětu) a \textbf{nehmotné} (práva, jejichž povaha to připouští, a jiné věci bez hmotné podstaty), a na \textbf{nemovité} (pozemky a podzemní stavby) a \textbf{movité} (ostatní). \textbf{Právo stavby} je věcným právem, které je nehmotnou nemovitou věcí a zahrnuje budovu postavenou na cizím pozemku, omezeným na 99 let.
+
+V rámci věcného práva definujeme pojmy \textit{uživání} (využití věci k vybraným aktivitám, pro předání dál můžu využít \textit{nájemní smlouvu}) a \textit{požívání} (čerpání výsledků z daného pozemku, pro předání dál můžu využít \textit{pachtovní smlouvu}) věci. Lze definovat věcná práva k věci cizí pomocí \textbf{věcných břemen}. Ta se dělí na \textit{služebnosti} (oprávněni užívat cizí věc, lze zřídit buďto osobě nebo mezi vlastníky pozemku služebného a panovního) a \textit{reálná břemena} (povinnost vykonávat určité plnění).
+
+\subsection{Vlastnické právo}
+
+Právo vlastnictví nastaví úplné nebo částečné právní panství nad konkrétní věcí. Právo dodržuje pravidlo \textbf{erga omnes} - právo příslušní jen jedné konkrétní osobě, ale všichni ostatní (bez jejich konkrétního určení) jsou povinni toto právo respektovat.
+
+Každý má právo vlastnit majetek. Vlastnictví zavazuje a nesmí být zneužito na újmu práv druhých anebo v rozporu se zákonem chráněnými obecnými zájmy. Výkon vlastnického práva nesmí poškozovat lidské zdraví, přírodu a životní prostředí.
+
+Vlastnictví lze nabývat na základě smlouvy - \textit{převodem}, \textit{přechodem} (podle zákona nebo soudního rozhodnutí), \textit{přivlastněním} (pro věci ničí), \textit{vydržením} (nabytí po 3 letech movitých věcí / 10 letech nemovitých věcí při dobré víře, že věc vlastním), \textit{přírůstkem} nebo \textit{děděním}.
+
+\textbf{Spoluvlastnictví} zahrnuje situaci, kdy jednu věc vlastní současně více osob. Platí, že z věcí nakládají jako jedna osoba, každý má právo k celé věci. Lze definovat spoluvlastnický podíl jako vyjádření míry účasti každého spoluvlastníka na vytváření společné vůle a právech/povinnostech vyplývajících ze spoluvlastnictví věci
+
+\section{Závazková práva}
+
+\textbf{Závazek} je právní vztah, kde \textit{dlužník} je povinen něco (tzv. \textit{dluh}) dát, něco konat, něčeho se zdržet nebo něco strpět a \textit{věřitel} je oprávněn to od něho požadovat a vymáhat své právo (\textit{pohledávka}). Závazky vznikají ze \textit{smluv} nebo \textit{protiprávního jednání}.
+
+\textbf{Smlouva} je projev vůle stran zřídit mezi sebou závazek a řídit se obsahem smlouvy. Smlouva vzniká \textbf{kontraktační}m \textbf{proces}em, kde navrhovatel (\textit{oferent}) provede návrh na uzavření smlouvy (\textit{nabídka}) druhé straně (\textit{oblát}). Samotný úmysl uzavřít určitou smlouvu je závazný. Akceptace nabídky je omezena \textit{akceptační lhůtou} stanovenou buďto přesně, nebo přiměřeně povaze smlouvy.
+
+V rámci doby trvání závazku lze provést změny v osobě věřitele (nevyžaduje souhlas dlužníka), změny v osobě dlužníka (vyžaduje souhlas věřitele s výjimkou \textit{přistoupení k dluhu}) a změna obsahu.
+
+Závazek zaniká splněním (potřebně řádně a včas, možné domluvit \textit{fixní závazek} s neměnným termínem, potvrzené \textit{kvitanci} splnění dluhu). Závazek nezaniká vadný plněním (bez stanovených vlastností, neupozorněním na vady, uvedením v rozpor nebo zcizením), vadu je nutné bez zbytečného odkladu poté, kdy je dána možnost věc prohlédnout a vadu zjistit, nejpozději do šesti měsíců. \textit{Nápadná vada} zřejmá již při uzavírání smlouvy patří k tíži nabyvatele. Z jiných důvodů může závazek končit \textit{dohodou}, \textit{započtením}, \textit{odstupným}, \textit{uplatněním poukázky}, \textit{splynutím} (fúzí právnických osob), \textit{prominutím}, \textit{výpovědí}, \textit{odstoupením} nebo \textit{nemožností plnění}.
+
+\textbf{Zajištění}m \textbf{dluhu} rozumíme závazek třetí osoby směrem k věřiteli nebo v jeho prospěch za splnění dluhu. \textbf{Utvrzení}m \textbf{dluhu} dlužník sjedná s věřitelem pro případ smluvní pokutu nebo uznání dluhu.
+
+\textbf{Závazky z deliktů} vzniká porušením právní povinnosti a vznikem škody nebo újmy nemajetkové povahy. Škoda má být odčiněna uvedením do předešlého stavu; není-li to dobře možné, poté v penězích za škodu a ušlý zisk. Nemajetková újma je odčiněna přiměřeným zadostiučiněním.
+
+\end{document}
