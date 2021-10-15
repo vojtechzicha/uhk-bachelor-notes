@@ -1,0 +1,68 @@
+\epigraph{Vytvořeno podle přednášek \textbf{RNDr. Petra Tučníka, Ph.D.} v kombinovaném studiu v zimním semestru 2021/2022 a podle materiálů dostupných ke studiu v systému UHK Oliva.}{}
+
+\section{BPMN}
+
+\textbf{Firemní proces} je posloupnost aktivit vykonávané jedním či více účastníky za účelem přinést organizaci nějakou hodnotu. Kontext určuje, kdo nebo co musí provést danou aktivitu. Rozlišujeme \textit{manažerské procesy} (řídí běh organizace), \textit{operační procesy} a \textit{podpůrné procesy}.
+
+Cílem modelování procesu je chápat a řídit aktuální procesy, zlepšovat současné a navrhovat nové procesy, zprostředkovat existující a nové procesy a automatizace procesu.
+
+Samotné \textbf{BPMN 2} zachycuje tři aspekty procesů - procesy, spolupráce a choreografie.
+
+\subsection{Collaboration diagram}
+
+BPMN proces obsahuje následující množinu elementů sekvenčního toku:
+
+\begin{itemize}
+    \item \textbf{Události} - triggery a result;
+    \begin{itemize}
+        \item \textit{podle času:} vstupní událost, vnitřní a vnitřní hraniční událost a koncová událost;
+        \item \textit{podle typu:} nespecifikovaná vstupní, nespecifikovaná vnitřní (aktivují se okamžitě);
+        \item \textit{podle chování:} interrupting, non-interrupting;
+        \item \textit{podle příjemce:} message ($1:1$), signal ($1:n$), timer (vypršení, oddálení nebo rozvětvení), conditional a terminate (výstup procesu nelze použít pro další proces).
+    \end{itemize}  
+    \item \textbf{Aktivity} - task, sub-process, ad-hoc sub-process (provedení aktivit v libovolném pořadí), event sub-process (reakce na událost), call activity (vyvolání globálního procesu) a transaction sub-process (transakční vlastnosti).
+    \item \textbf{Rozhodovací uzly} - exclusive gateway (data-based XOR), parallel gateway (ALL), event based gateway (event-based XOR), inclusive gateway (OR) a complex gateway.
+    \item \textbf{Task} - nespecifikovaný task, send task, recieve task, manual task, user task, service task (musí být spuštěn zprávou typu message), script task a business rule task.
+    \item \textbf{Artefakty} - poznámky a skupiny.
+    \item \textbf{Kontext a oddíly kontextu}.
+    \item \textbf{Datové objekty} - data object / data object collection, datový vstup, datový výstup nebo datové úložiště.
+\end{itemize}
+
+\textbf{Token} je imaginární bod reprezentující aktuální okamžik průchodu grafem, prochází od zdrojového objektu k cílovému pomocí procesního diagramu. Pokud má aktivita více vstupních vláken, spouští se při každém příchodu tokenu. Po dokončení vysílá aktivita tokeny na všechna odchozí vlákna.
+
+\subsection{Workflow Patterns}
+
+\textbf{Workflow patterns} jsou ustálená řešení typických situací při modelování chování firemních procesů.
+
+\begin{itemize}
+    \item \textbf{Paralelní rozdělení} - rozdělení procesů do dvou a více paralelních vláken. Možnost zadat více šipkami, přidáním objektu Grup nebo pomocí parallel gateway.
+    \item \textbf{Synchronizace} - spojení procesů do jednoho vlákna. Možnost zadat pomocí parallel gateway nebo odchod ze subprocesu.
+    \item \textbf{Vylučovací rozhodování} - rozdělení vlákna na exklusivní sadu vláken, alespoň jedna z nich nastane. Možnost zadat pomocí exclusive gateway.
+    \item \textbf{Jednoduché sloučení} - spojení nezávislých vláken, které nepodmiňuje pokračování.
+    \item \textbf{Vícenásobný výběr} - rozvětvení do každého vlákna, jehož podmínka je splněna. Možnost realizovat pomocí podmíněných zpráv nebo inclusive gateway.
+    \item \textbf{Doplňkové cykly} - opakování části workflow. Možnost zadat pomocí výchozí cesty a výchozím konektorem nebo cyklickým subprocesem.
+    \item \textbf{Odložené rozhodnutí} - rozhoduji na základě události. Možnost zadat pomocí event gateway.
+    \item \textbf{Milník} - významná událost nebo splněná podmínka. Možnost zadat pomocí události Link.
+\end{itemize}
+
+\subsection{Conversation Diagram}
+
+Zachycuje výměnu zpráv mezi jednotlivým \textbf{kontexty} pomocí \textbf{konektorů}.
+
+\section{UML}
+\subsection{Správa požadavků}
+
+\textbf{Požadavek} je vyjádření přání uživatele, popis jisté funkce či vlastnosti, která by měla být vyvíjeném systému implementována.
+
+\begin{itemize}
+    \item \textbf{Funkční požadavky} - specifikují funkčnost systému.
+    \item \textbf{Nefunkční požadavky} - specifikují vlastnosti, či omezení fungování systému.
+\end{itemize}
+
+\subsection{Případy užití}
+
+Definice, číslování, alternativní scénaře, vazby <<include>> (ze základního do vnořeného, povinná vazba) a <<extend>> (možné případy užití, z rozšíření do základního objektu).
+
+\subsection{Sekvenční diagramy}
+
+\subsection{Diagramy tříd}
