@@ -1,0 +1,69 @@
+\epigraph{Vytvořeno podle přednášek \textbf{RNDr. Petra Tučníka, Ph.D.} v kombinovaném studiu v zimním semestru 2021/2022 a podle materiálů dostupných ke studiu v systému UHK Oliva.}{}
+
+\section{Agenty a Multiagentní systémy}
+
+\textbf{Agent} je program, který má autonomní chování, vnímání prostředí a adaptaci na změny - cokoliv, co vnímá své \textbf{prostředí} prostřednictvím \textbf{senzorů} a koná v tomto prostředí pomocí \textbf{aktuátorů}. Agenty vynikají autonomií, případně možností vnímat sociální kontext. Příklady agentů reprezentují \textit{robotický agent}, \textit{softwarový agent} a další.
+
+\textbf{Vjem} je označení senzorických vstupů agenta v kterémkoli okamžiku. Agent je specifikován, jestliže pro libovolnou sekvencí vjemů je definována akce. Toto chování agenta je popsáno \textbf{funkcí agenta}, ta je realizována \textbf{programem agenta}.
+
+\textbf{Racionální agent} je takový agent, který má v rámci své funkce přiřazenou \textit{správnou akci} pro každý věk. Správnost akce se hodnotí podle toho, zda zvyšuje úspěšnost agenta při plnění jeho úkolu - \uv{výkonnost agenta}. Výkonnost agenta se měří podílem správných stavů vnitřního fungování agenta.
+
+\textbf{Úkolové prostředí} jsou problémy, pro které agenty jsou řešení. Úkolová prostředí jsou popsána \textbf{PEAS} popisem - výkonnost (performance), prostředí (environment), aktuátory (actuators) a senzory (sensors).
+
+\begin{itemize}
+\item \textbf{Pozorovatelnost} relevantních aspektů - \textit{plně pozorovatelné} a \textit{částěčně pozorovatelné}.
+\item \textbf{Determinismus} - \textit{deterministické} a \textit{stochastické}.
+\item \textbf{Dělení zkušeností} - \textit{epizodické} a \textit{sekvenční}.
+\item \textbf{Stabilita prostředí} - \textit{statické} a \textit{dynamické}.
+\item \textbf{Kontinuita} - \textit{diskrétní} a \textit{kontinuální}.
+\item \textbf{Četnost agentů} - \textit{single agentní}, \textit{konkurenční multiagent} a \textit{kooperativní multiagentntní}.
+\end{itemize}
+
+\subsection{Typy agentů}
+
+\subsubsection{Ryze reaktivní agenty}
+Tyto agenty na základě aktuálního vjemu volí konkrétní akci.
+
+$$ KDYŽ(vjem) \rightarrow PAK(akce) $$
+
+Vhodné pro plně pozorovatelné systémy.
+
+\subsubsection{Agenty s vnitřní reprezentací prostředí}
+Tyto agenty uchovávají reprezentaci vnitřního stavu, závislou na minulých vjemech. Tato reprezentace vytváří \textbf{model světa}, na které agent reaguje.
+
+\subsubsection{Agenty řízené cílem}
+Tento agent kromě modelu světa má navíc \textbf{cíl akce}, který se agent svým chováním snaží dosáhnout. Pokud cíl není bezprostřední, musí agent vyhledat sekvenci akcí vedoucí k dosažení cíle. Tyto postupy se nazývají \textbf{prohledávání} a \textbf{plánování}.
+
+\subsubsection{Agenty řízené užitečností}
+Tyto agenty navíc řeší i kvalitu rozhodnutí, která vedou k cíli. Mají definovánu \textbf{odměňovací funkci}, která rozlišuje mezi horším a lepším řešením vzniklé situace. Tato funkce přiřazuje stavům reálné číslo, které reprezentuje kvalitu řešení.
+
+\subsubsection{Učící se agenty}
+
+\textbf{Učení} umožňuje agentu adaptovat se v neznámém prostředí a optimalizovat výkon. TODO Zpětná vazba a pojmy
+
+\section{Architektury MAS}
+
+Volba struktury má významný dopad na efektivitu jeho fungování. Základní myšlenkou je mí† systém implementačně co nejjednodušší, ale takový, aby stačil řešit určený problém.
+
+
+\begin{itemize}
+\item \textbf{Hierarchie} - Typicky stromová struktura bez laterálních vazeb. Vzniká latence z důvodu předávání informací. Zavedení architektury vede k nižšímu množství interakcí mezi agenty, možnost vytváření \textit{omezení} pro chování agentů pomocí definice \textit{rolí} a diverzifikace informací poskytované agentům.
+    \begin{itemize}
+        \item Vzor \textbf{Kontraktační síť} - úkol je rozložen na podúkoly, pro jejich řešení jsou uzavírány krátkodobé kontrakty s agenty nižších úrovní.
+    \end{itemize}
+\item \textbf{Holarchie} - Základním prvkem je \textit{holon} - částečně autonomní zapouzdřené jednotky skládající se z koordinačního agenta, který zakryje skupinu agentů, se kterými spolupracuje.
+\item \textbf{Koalice} - Dočasné struktury zaměřené na specifický cíl s plochou strukturou (případně s koordinačním agentem).
+\item \textbf{Týmy} - Skupina kooperující agentů s prioritizací užitku skupiny. Individuální akce mají být koordinovány tak, aby byly v souladu s cílem týmu. Arbitrární uspořádání.
+    \begin{itemize}
+        \item Vzor \textbf{Matchmaker} - TODO
+    \end{itemize}
+\item \textbf{Kongregace} - Dlouhotrvající, plochá struktura agentů s podobnými charakteristikami. Pomáhá redukovat limit interakcí a složitost vyhledávání agentů. Vytváření kongregací probíhá pomocí štítků.
+\item \textbf{Societa} - Otevřené systémy definující struktura a řád, kde konkrétní interakce jsou flexibilní. Lokalizace pravidel MAS pro konkrétní prostředí / možnost definice násobných pravidel.
+\item \textbf{Federace} - skupina agentů předá část své autonomie jinému agentovi, který skupinu reprezentuje. Členové skupiny komunikují pouze ze svým zástupcem.
+    \begin{itemize}
+        \item Vzor \textbf{Broker} - TODO
+    \end{itemize}
+\item \textbf{Trhy} - obsahují agenty kupující zdroje a prodejci, kteří zpracovávají poptávky a určují rozdělení zdrojů. Výhodné pro alokační úlohy a cenotvorbu.
+\item \textbf{Maticové organizace} - kombinace manažerských a řešitelských agentů na násobné vazby mezi jednotlivými objekty. Cenou vyšší komplexity dochází k optimalizaci řešitelských zdroj.
+\item \textbf{Složené organizace} - kombinace předchozích architektur.
+\end{itemize}
